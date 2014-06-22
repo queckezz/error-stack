@@ -1,6 +1,6 @@
 {
-  "name": "error-parse",
-  "description": "extracts useful information from an error stack",
+  "name": "error-stack",
+  "description": "extracts useful information from an error stack and allows you to skip certain steps",
   "repository": "git://github.com/queckezz/error-parse.git",
   "version": "0.0.1",
   "license": "MIT",

@@ -1,19 +1,19 @@
 
-# error-parse
+# error-stack
 
 extracts useful information from an error stack. Currently this has only been tested with v8 error stacks.
 
 ## Installation
 
 ```bash
-$ npm install error-parse
+$ npm install error-stack
 ```
 
 ## Usage
 
 ```js
 var err = new Error('Oh noes!')
-var stack = parse(err)
+var stack = stack.parse(err)
 ```
 
 transforms
