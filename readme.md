@@ -9,7 +9,13 @@ extracts useful information from an error stack. Currently this has only been te
 $ npm install error-stack
 ```
 
-## Usage
+## Api
+
+### #parse(Error)
+
+parse an `Error`'s stack object and returns a stack.
+
+## Example
 
 ```js
 var err = new Error('Oh noes!')
