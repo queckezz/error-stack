@@ -2,13 +2,13 @@
 'use strict'
 
 var assert = require('assert')
-var parse = require('../lib')
+var stack = require('../lib')
 var type = require('component-type')
 
 describe('error-parse', function () {
   var msg = 'Bad Error!'
   var err = new Error(msg)
-  var error = parse(err)
+  var error = stack.parse(err)
   console.log(JSON.stringify(error.stack, null, 2));
 
   it('should have a name and msg', function () {
@@ -30,7 +30,7 @@ describe('error-parse', function () {
       stack: 'Error: aw\n  at exports.runInThisContext (vm.js:69:16)'
     }
 
-    error = parse(err)
+    error = stack.parse(err)
     var line = error.stack[0]
     assert.equal(line.call, 'exports.runInThisContext')
     assert.equal(line.file, 'vm.js')
@@ -46,7 +46,7 @@ describe('error-parse', function () {
       stack: 'Error: aw\n  at vm.js:69:16'
     }
 
-    error = parse(err)
+    error = stack.parse(err)
     var line = error.stack[0]
     assert.equal(line.file, 'vm.js')
     assert.equal(line.row, '69')
