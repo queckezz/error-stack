@@ -1,0 +1,15 @@
+{
+  "name": "error-parse",
+  "description": "extracts useful information from an error stack",
+  "repository": "git://github.com/queckezz/error-parse.git",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "dependencies": {
+    "array-iterator": "0.0.1"
+  },
+  "devDependencies": {
+    "component-type": "^1.0.0",
+    "mocha": "1.x"
+  }
+}
